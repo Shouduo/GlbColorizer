@@ -1,38 +1,84 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
+}
+
+.RandomButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.RandomButton:active {
+  background-color: #cccccc;
+}
+
+.Colorizer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.TargetSelector {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SelectorItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.4rem;
+  font-size: 1.4rem;
+  padding: 0.4rem;
+  border: 1px solid #cccccc;
+  border-radius: 0.5rem;
+}
+
+.ItemSelected {
+  background-color: #cccccc;
+}
+
+.ItemPanel {
+  margin-right: 0.5rem;
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+.ColorPicker {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.Colorful {
+  width: auto !important;
+  padding: 0.2rem;
+}
+
+.Colorful .w-color-saturation {
+  height: 200px !important;
+}
+
+.ColorCandidates {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Candidate {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
 }
