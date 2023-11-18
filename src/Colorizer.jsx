@@ -46,7 +46,7 @@ const Colorizer = () => {
           <Colorful
             className="Colorful"
             disableAlpha={true}
-            color={colors.find((p) => p.id === target).color}
+            color={colors.find((p) => p.id === target)?.color ?? "#ffffff"}
             onChange={(c) => onColorChange(c.hex)}
           />
           <div className="ColorCandidates">
