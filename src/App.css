@@ -41,6 +41,7 @@
   border: 1px solid #cccccc;
   border-radius: 0.5rem;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .ItemSelected {
