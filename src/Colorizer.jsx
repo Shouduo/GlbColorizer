@@ -30,6 +30,7 @@ const Colorizer = () => {
             <div
               className={`SelectorItem ${id === target ? "ItemSelected" : ""}`}
               id={id}
+              key={key}
               onClick={onItemClick}
             >
               <div

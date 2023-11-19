@@ -6,3 +6,4 @@ export const DEFAULT_COLORS = [
   { id: 4, key: "leg", name: "腿部", color: "#8cff23" },
   { id: 5, key: "shoe", name: "鞋子", color: "#8f3ad4" },
 ];
+
