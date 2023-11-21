@@ -1,7 +1,31 @@
 import React, { useState, useContext } from "react";
 import Colorful from "@uiw/react-color-colorful";
 import { AppContext } from "./App";
-import { DEFAULT_COLORS } from "./utils/constant";
+import "./Colorizer.css";
+
+const TargetSelector = ({ items, onItemClick }) => {
+  const [top, setTop] = useState(0);
+  const onClick = (e) => {
+    setTop(e.target.offsetTop);
+    onItemClick(e);
+  };
+  return (
+    <div className="TargetSelector">
+      <div className="SelectorContainer">
+        <div
+          className="SelectedBackground"
+          style={{ transform: `translateY(${top}px)` }}
+        />
+        {items.map(({ id, key, name, color }) => (
+          <div className="SelectorItem" id={id} key={key} onClick={onClick}>
+            <div style={{ backgroundColor: color }} className="ItemDot"></div>
+            {name}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const Colorizer = () => {
   const [target, setTarget] = useState(0);
@@ -21,28 +45,11 @@ const Colorizer = () => {
 
   return (
     <>
-      <div className="SelectorItem RandomButton" onClick={onRandomColors}>
+      <div className="RandomButton" onClick={onRandomColors}>
         🎲 随机
       </div>
       <div className="Colorizer">
-        <div className="TargetSelector">
-          {DEFAULT_COLORS.map(({ id, key, name, color }) => (
-            <div
-              className={`SelectorItem ${id === target ? "ItemSelected" : ""}`}
-              id={id}
-              key={key}
-              onClick={onItemClick}
-            >
-              <div
-                style={{
-                  backgroundColor: colors.find((p) => p.id === id).color,
-                }}
-                className="ItemPanel"
-              ></div>
-              {name}
-            </div>
-          ))}
-        </div>
+        <TargetSelector items={colors} onItemClick={onItemClick} />
         <div className="ColorPicker">
           <Colorful
             className="Colorful"

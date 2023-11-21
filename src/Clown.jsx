@@ -22,7 +22,7 @@ const Clown = (props) => {
 
   return (
     <group ref={group} dispose={null}>
-      <ambientLight intensity={0.5} />
+      {/* <ambientLight intensity={0.5} /> */}
       <OrbitControls enableZoom={false} />
       <PerspectiveCamera
         makeDefault={true}

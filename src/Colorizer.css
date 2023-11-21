@@ -1,0 +1,128 @@
+.RandomButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  color: white;
+  background: #3d3d3d;
+  /* mix-blend-mode: difference; */
+  padding: 0.4rem;
+  border: 1px solid #cccccc;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.RandomButton:active {
+  /* background-color: #cccccc; */
+  filter: brightness(0.8) !important;
+}
+
+.Colorizer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #3d3d3d;
+}
+
+.TargetSelector {
+  padding: 0.4rem;
+  border-radius: 0.8rem;
+  align-self: stretch;
+  box-shadow: inset rgba(0, 0, 0, 0.8) 0px 0px 20px -12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  /* box-shadow: rgb(114, 114, 114) 0px 0px 10px 5px inset; */
+}
+
+.SelectorContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.SelectorItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 0.4rem; */
+  font-size: 1.4rem;
+  color: white;
+  /* mix-blend-mode: difference; */
+  padding: 0.4rem;
+  /* border: 1px solid #cccccc; */
+  border-radius: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  /* -webkit-tap-highlight-color: transparent; */
+  z-index: 2;
+}
+
+.SelectedBackground {
+  position: absolute;
+  z-index: 1;
+  height: 2.5rem;
+  width: 100%;
+  /* padding: 0.4rem; */
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all ease 0.2s;
+}
+
+.ItemSelected {
+  background-color: #333333;
+}
+
+.ItemDot {
+  margin-right: 0.5rem;
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.ColorPicker {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.Colorful {
+  width: 100% !important;
+  /* padding: 0.2rem; */
+}
+
+.Colorful .w-color-saturation {
+  height: 170px !important;
+}
+
+.ColorCandidates {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Candidate {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 0.5rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+}
+
+.Candidate:active {
+  filter: brightness(0.8) !important;
+}
