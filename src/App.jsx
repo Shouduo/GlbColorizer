@@ -49,6 +49,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <div className="Background"></div>
       <AppContext.Provider value={{ colors: colors, dispatch: dispatch }}>
         <Canvas className="Canvas">
           <Clown />
