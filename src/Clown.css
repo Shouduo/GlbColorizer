@@ -1,0 +1,49 @@
+.LoadingScreen {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProgressBar {
+  position: relative;
+  width: 60%;
+  height: 1.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8rem;
+  box-shadow: inset rgba(0, 0, 0, 0.8) 0px 0px 16px -10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.ProgressBar::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  /* width: 100%; */
+  top: 0;
+  left: 0;
+  border-radius: 0.8rem;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 10px,
+    rgba(0, 0, 0, 0.4) 10px,
+    rgba(0, 0, 0, 0.4) 20px
+  );
+  animation: progress ease 8s forwards;
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

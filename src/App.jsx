@@ -1,9 +1,9 @@
-import React, { useReducer, createContext } from "react";
+import React, { Suspense, useReducer, createContext } from "react";
 import "./App.css";
 import Clown from "./Clown";
 import { Canvas } from "@react-three/fiber";
 import Colorizer from "./Colorizer";
-import { OrbitControls, Environment } from "@react-three/drei";
+import { OrbitControls, Environment, useProgress } from "@react-three/drei";
 import { DEFAULT_COLORS } from "./utils/constant";
 
 const colorsReducer = (colors, action) => {
@@ -53,7 +53,7 @@ const App = () => {
       <AppContext.Provider value={{ colors: colors, dispatch: dispatch }}>
         <Canvas className="Canvas">
           <Clown />
-          <Environment preset="apartment" background />
+          {/* <Environment preset="apartment" background /> */}
         </Canvas>
         <Colorizer />
       </AppContext.Provider>
