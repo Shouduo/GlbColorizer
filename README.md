@@ -17,7 +17,9 @@ yarn start
 
 ## ScreenShots
 
-![img](/screenshot/screenshot_1.png)
+<p align="center">
+  <img src="/screenshot/screenshot_1.png" style="width: 320px">
+</p>
 
 ## License
 
